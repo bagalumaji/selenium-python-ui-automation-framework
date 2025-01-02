@@ -1,2 +1,4 @@
 class DriverFactory:
-    pass
+    @staticmethod
+    def get_driver():
+        pass
