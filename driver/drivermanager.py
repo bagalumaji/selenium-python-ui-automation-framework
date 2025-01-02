@@ -1,8 +1,13 @@
+import threading
+
+
 class DriverManager:
-    @staticmethod
-    def get_driver():
-        pass
+    _thread_local_driver = threading.local()
 
     @staticmethod
-    def set_driver():
-        pass
+    def get_driver():
+        return getattr(DriverManager._thread_local_driver, "driver", None)
+
+    @staticmethod
+    def set_driver(driver):
+        DriverManager._thread_local_driver.driver = driver
