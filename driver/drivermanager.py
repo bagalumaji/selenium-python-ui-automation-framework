@@ -11,3 +11,8 @@ class DriverManager:
     @staticmethod
     def set_driver(driver):
         DriverManager._thread_local_driver.driver = driver
+
+    @staticmethod
+    def unload():
+        if hasattr(DriverManager._thread_local_driver, "driver"):
+            del DriverManager._thread_local_driver.driver
