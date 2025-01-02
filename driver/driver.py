@@ -1,2 +1,8 @@
 class Driver:
-    pass
+    @staticmethod
+    def init_driver():
+        pass
+
+    @staticmethod
+    def quit_driver():
+        pass
