@@ -1,5 +1,5 @@
 from driver.drivermanager import DriverManager
-from factory.driverfactory import DriverFactory
+from driver.factory import DriverFactory
 
 
 class Driver:
