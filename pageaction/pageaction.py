@@ -1,7 +1,10 @@
+from driver.drivermanager import DriverManager
+
+
 class PageAction:
     @staticmethod
-    def click():
-        pass
+    def click(locator):
+        DriverManager.get_driver().find_element(*locator).click()
 
     @staticmethod
     def type():
