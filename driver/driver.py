@@ -1,13 +1,12 @@
-from selenium import webdriver
-
 from driver.drivermanager import DriverManager
+from factory.driverfactory import DriverFactory
 
 
 class Driver:
     @staticmethod
     def init_driver() -> None:
-        driver = webdriver.Chrome()
-        driver.maximize_window()
+        browser = "firefox"
+        driver = DriverFactory.get_driver(browser)
         DriverManager.set_driver(driver)
 
     @staticmethod
