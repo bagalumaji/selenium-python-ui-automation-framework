@@ -7,6 +7,8 @@ class Driver:
     def init_driver() -> None:
         browser = "firefox"
         driver = DriverFactory.get_driver(browser)
+        driver.maximize_window()
+        driver.get("https://tutorialsninja.com/demo/index.php")
         DriverManager.set_driver(driver)
 
     @staticmethod
