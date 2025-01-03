@@ -1,11 +1,10 @@
-from selenium import webdriver
+from driver.driver import Driver
+from driver.drivermanager import DriverManager
 
 
 def test_demo():
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.get("https://www.google.com")
-    print(driver.title)
-    print(driver.current_url)
-    driver.close()
-    driver.quit()
+    Driver.init_driver()
+    DriverManager.get_driver().get("https://www.google.com")
+    print(DriverManager.get_driver().title)
+    print(DriverManager.get_driver().current_url)
+    Driver.quit_driver()
