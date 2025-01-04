@@ -7,9 +7,9 @@ class PageAction:
         WaitFactory.wait_for_element_to_be_clickable(locator, timeout).click()
 
     @staticmethod
-    def type():
-        pass
+    def type(locator, message, timeout):
+        WaitFactory.wait_for_element_to_be_clickable(locator, timeout).send_keys(message)
 
     @staticmethod
-    def is_displayed():
-        pass
+    def is_displayed(locator, timeout):
+        return WaitFactory.wait_for_element_to_be_visible(locator, timeout)
