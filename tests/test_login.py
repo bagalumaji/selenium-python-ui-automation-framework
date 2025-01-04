@@ -9,3 +9,4 @@ class TestLogin:
     def test_verify_login_for_valid_credential(self):
         home_page = HomePage()
         home_page.click_on_my_account_link()
+        home_page.click_on_login()
