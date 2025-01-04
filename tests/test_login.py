@@ -1,5 +1,3 @@
-import time
-
 import pytest
 
 from fixtures.conftest import setup_and_teardown
