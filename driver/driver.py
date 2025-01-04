@@ -5,7 +5,7 @@ from driver.factory.driverfactory import DriverFactory
 class Driver:
     @staticmethod
     def init_driver() -> None:
-        browser = "firefox"
+        browser = "chrome"
         driver = DriverFactory.get_driver(browser)
         driver.maximize_window()
         driver.get("https://tutorialsninja.com/demo/index.php")
