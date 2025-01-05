@@ -1,7 +1,7 @@
 import pytest
 
 from driver.drivermanager import DriverManager
-from fixtures.conftest import setup_and_teardown
+from conftest import setup_and_teardown
 @pytest.mark.usefixtures('setup_and_teardown')
 class TestDemo:
 
