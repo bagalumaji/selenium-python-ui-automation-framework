@@ -1,3 +1,4 @@
+from config.config_reader import ConfigReader
 from driver.drivermanager import DriverManager
 from driver.factory.driverfactory import DriverFactory
 
@@ -5,10 +6,10 @@ from driver.factory.driverfactory import DriverFactory
 class Driver:
     @staticmethod
     def init_driver() -> None:
-        browser = "chrome"
-        driver = DriverFactory.get_driver(browser)
+        config_reader = ConfigReader()
+        driver = DriverFactory.get_driver(config_reader.get_browser())
         driver.maximize_window()
-        driver.get("https://tutorialsninja.com/demo/index.php")
+        driver.get(config_reader.get_url())
         DriverManager.set_driver(driver)
 
     @staticmethod
