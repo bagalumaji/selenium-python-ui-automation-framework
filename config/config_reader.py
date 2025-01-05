@@ -14,14 +14,14 @@ class ConfigReader:
             cls._config.read(FrameworkConstants.FRAMEWORK_CONFIG_FILE_NAME)
         return cls._instance
 
-    def get_url(self) -> str:
+    def url(self) -> str:
         return self._config.get("basic_info", "url")
 
-    def get_user_name(self) -> str:
+    def user_name(self) -> str:
         return self._config.get("basic_info", "username")
 
-    def get_password(self) -> str:
+    def password(self) -> str:
         return self._config.get("basic_info", "password")
 
-    def get_browser(self):
+    def browser(self):
         return self._config.get("basic_info", "browser")
