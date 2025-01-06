@@ -4,7 +4,7 @@ import pytest
 
 from pages.homepage import HomePage
 from pages.login.login_page import LoginPage
-
+from conftest import setup_and_teardown
 
 @pytest.mark.usefixtures('setup_and_teardown')
 class TestLogin:
