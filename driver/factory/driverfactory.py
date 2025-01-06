@@ -9,6 +9,6 @@ class DriverFactory:
         Browser.FIREFOX: lambda: webdriver.Firefox()
     }
 
-    @staticmethod
-    def get_driver(browser:Browser):
-        return DriverFactory._driver_factory.get(browser)()
+    @classmethod
+    def get_driver(cls, browser: Browser):
+        return cls._driver_factory.get(browser)()
