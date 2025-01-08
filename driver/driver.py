@@ -16,5 +16,6 @@ class Driver:
 
     @staticmethod
     def quit_driver() -> None:
-        DriverManager.get_driver().quit()
-        DriverManager.unload()
+        if DriverManager.get_driver():
+            DriverManager.get_driver().quit()
+            DriverManager.unload()
