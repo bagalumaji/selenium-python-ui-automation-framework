@@ -16,7 +16,5 @@ class TestLogin:
         home_page.click_on_my_account_link()
         home_page.click_on_login()
         login_page = LoginPage()
-        login_page.enter_email(c1.user_name())
-        login_page.enter_password(c1.password())
-        login_page.click_on_login_button()
+        login_page.login_to_application(c1.user_name(), c1.password())
         time.sleep(5)
