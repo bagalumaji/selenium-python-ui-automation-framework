@@ -14,7 +14,6 @@ class LoginPage:
     def _enter_email(self, user_name):
         email_locator = DynamicXpathUtil.create_xpath(self._XPATH_FOR_EMAIL_AND_PASSWORD,
                                                       LoginPageConstants.EMAIL_ID_ADDRESS)
-        print(email_locator)
         PageAction.type(email_locator, self._config.default_timeout(), user_name)
 
     def _enter_password(self, password):
