@@ -10,7 +10,7 @@ from pages.login.login_page import LoginPage
 
 @pytest.mark.usefixtures('setup_and_teardown')
 class TestLogin:
-    def test_verify_login_for_valid_credential(self):
+    def test_verify_login_for_invalid_credential(self):
         c1 = ConfigReader()
         home_page = HomePage()
         home_page.click_on_my_account_link()
