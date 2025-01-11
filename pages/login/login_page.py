@@ -6,7 +6,7 @@ from utils.dynamic_xpath_util import DynamicXpathUtil
 
 
 class LoginPage:
-    _XPATH_FOR_EMAIL_AND_PASSWORD = "//label[normalize-space()='{text}']/following-sibling::input"
+    _XPATH_FOR_EMAIL_AND_PASSWORD = "//label[normalize-space()='{}']/following-sibling::input"
     _LOGIN_BUTTON = By.XPATH, "//input[@value='Login']"
 
     def enter_email(self, user_name):
