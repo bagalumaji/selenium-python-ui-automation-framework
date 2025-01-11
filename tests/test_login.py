@@ -18,3 +18,5 @@ class TestLogin:
         login_page = LoginPage()
         login_page.login_to_application(c1.user_name(), c1.password())
         time.sleep(5)
+
+
