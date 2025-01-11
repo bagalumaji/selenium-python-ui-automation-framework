@@ -25,3 +25,6 @@ class ConfigReader:
 
     def browser(self):
         return self._config.get("basic_info", "browser")
+
+    def default_timeout(self):
+        return self._config.get("basic_info", "default_timeout")
