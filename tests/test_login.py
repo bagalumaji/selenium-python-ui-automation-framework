@@ -19,4 +19,5 @@ class TestLogin:
         login_page.login_to_application(c1.user_name(), c1.password())
         time.sleep(5)
 
-
+    def test_verify_login_for_valid_credential(self):
+        pass
