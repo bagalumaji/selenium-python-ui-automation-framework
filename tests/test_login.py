@@ -3,7 +3,6 @@ import time
 import pytest
 
 from config.config_reader import ConfigReader
-from conftest import setup_and_teardown
 from pages.homepage import HomePage
 from pages.login.login_page import LoginPage
 
